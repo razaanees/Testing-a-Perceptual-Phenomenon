@@ -1,0 +1,65 @@
+/*Sample comment*/
+
+body {
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 25px;
+}
+
+h1 {
+	font-size: 30px;
+	font-family: calibri;
+	color: #1e90ff;
+}
+
+li {
+	line-height: 28px;
+}
+
+a:link {
+	color: blue;
+}
+
+a:visited {
+	color: blue;
+}
+
+p {
+	font-family: calibri;
+}
+
+.head2 {
+	font-size: 20px;
+	font-family: calibri;
+	color: #00bfff;
+	text-decoration: underline;
+}
+
+.question {
+	margin-top: 20px;
+	font-weight: 600;
+	font-family: arial;
+	font-size: 15px;
+
+}
+
+.answer {
+	margin-top: 17px;
+	font-family: calibri;
+}
+
+.equation {
+	text-align: center;
+	border-style: inset;
+}
+
+.figure {
+	text-align: center;
+}
+
+.figure_title {
+	font-family: calibri;
+	font-size: 20px;
+	text-align: center;
+	color: #00bfff;
+}

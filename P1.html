@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<!--created 2016-06-24--> 
+
+	<head>
+		<!-- Webpage title -->
+		<title> P1: Test a Perceptual Phenomenon</title>
+		<link rel="stylesheet" href="P1.css">
+	</head>
+
+	<body>
+		<h1>Investigating the Stroop Effect</h1>
+
+		<div class = "TOC">
+			<div class = "head2">Directory</div>
+			<ul>
+				<li><a href="#Back_inf">Background Information</a></li>
+				<li><a href="#Exp">Experiment Analysis</a></li>
+				<ol type = "A">
+					<li><a href="#q1">Question 1</a></li>
+					<li><a href="#q2">Question 2</a></li>
+					<li><a href="#q3">Question 3</a></li>
+					<li><a href="#q4">Question 4</a></li>
+					<li><a href="#q5">Question 5</a></li>
+					<li><a href="#q6">Question 6</a></li>
+				</ol>
+				<li><a href="#ref">References</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<div class = "head2" id = "Back_inf">Background Information</div>
+			<p>
+				In a Stroop task, participants are presented with a list of words, with each word displayed in a color of ink. The participant's task is to say out loud the color of the ink in which the word is printed. The task has two conditions: a congruent words condition, and an incongruent words condition. In the congruent words condition, the words being displayed are color words whose names match the colors in which they are printed: for example <font color="red">RED</font>, <font color = "blue">BLUE</font>. In the incongruent words condition, the words displayed are color words whose names do not match the colors in which they are printed: for example <font color = "orange">PURPLE</font>, <font color="purple">ORANGE</font>. In each case, we measure the time it takes to name the ink colors in equally-sized lists. Each participant will go through and record a time from each condition.
+			</p>
+
+			<div class = "head2" id = "Exp">Experiment Analysis</div>
+
+			<div class = "question" id = "q1">
+				1. What is our independent variable? What is our dependent variable?
+			</div>
+
+			<div class = "answer">
+				The independent and dependent variables are:<br>
+				- Independent: Congruency (or incongruency) of the words with the ink color.<br>
+				- Dependent: The amount of time required for participants to name the ink colors.
+			</div>
+
+			<div class = "question" id = "q2">
+				2. What is an appropriate set of hypotheses for this task? What kind of statistical test do you expect to perform? Justify your choices.
+			</div>
+
+			<div class = "answer">
+			The set of hypotheses for this test are:<br>
+			<div class="equation">
+				<img src="hypotheses.png" alt="Can't display"> <br>
+			</div>
+
+			A two-tailed, dependent, two conditions t-test with <img src="alpha.png" alt="Can't display"> = 0.05 will be performed to determine whether color congruency has an effect on recognition efficiency.
+
+			The two-tailed test was chosen to eliminate bias against one list over the other. For example, if the alternative hypothesis stated that the mean time of the congruent list would be less than the mean time of the incongruent list, then the author of the study may have a subconcious bias against the incongruent list. By constructing a two-tailed test, both methods can be examined fairly.<br>
+
+			A dependent (within-subject) t-test was chosen because the same participants took both tests.
+			</div>
+
+			<div class = "question" id = "q3">
+				3. Report some descriptive statistics regarding this dataset. Include at least one measure of central tendency and at least one measure of variability.
+			</div>
+
+			<div class = "answer">
+			The mean time of each list was calculated along with the mean of the difference in time. The standard deviation of the difference in time is also shown below.<br>
+
+			Note: The sample size was reduced from 24 to 22 because two entries qualified as outliers. The removal of the last two values of difference in time sorted by ascending values resulted in an approximate normal distribution for the rest of the sample data. This is shown in <a href="#q3">Question 4</a>.<br>
+			<br>
+			<div class="equation">
+				<img src="mean_sd.png" alt="Can't display"><br>
+			</div>
+			<br>
+			Note: Sample means calculated with sample size 24 and difference in mean calculated with sample size 22 after eliminating outliers as noted above.
+			</div>
+
+			<div class = "question" id = "q4">
+				4. Provide one or two visualizations that show the distribution of the sample data. Write one or two sentences noting what you observe about the plot or plots.
+			</div>
+
+			<div class="answer">
+			<div class="figure">
+				<img src="figure1.png" alt = "Can't Display"><br>
+			</div>
+			<div class="figure_title">Figure 1</div><br>
+			<br>
+			Figure 1, above, shows that the sample data series contains two outliers that disqualify it from t-test analysis. The sample data should have an approximate normal distribution for accurate result analysis. The outliers were identified using the interquartile range (IQR) and the last two values were eliminated from the analysis.<br>
+			<br>
+			The outlier range was calculated in the following way:<br>
+			<div class="equation">
+				(min, max) = <img src="IQR.png" alt = "Can't Display"><br>
+			</div>
+			This range was calculated to be:<br>
+			(5.7, 9.356)<br>
+			Therefore, <img src="d23.png" alt = "Can't display"> and <img src="d24.png" alt = "Can't display"> were eliminated from the sample dataset. Please refer to the <a href="#ref">reference</a> section for full calculations and details.<br>
+			<br>
+			<div class="figure">
+				<img src="figure2.png" alt = "Can't display"><br>
+			</div>
+			<div class="figure_title">Figure 2</div><br>
+			<br>
+			The sample dataset has a normal distribution with mean 7.44, as shown above in Figure 2.
+			</div>
+
+			<div class = "question" id = "q5">
+				5. Now, perform the statistical test and report your results. What is your confidence level and your critical statistic value? Do you reject the null hypothesis or fail to reject it? Come to a conclusion in terms of the experiment task. Did the results match up with your expectations?
+			</div>
+
+			<div class="answer">
+				The t-test was performed as:<br>
+				<br>
+				<div class = "equation">
+					<img src="t-stat.png" alt = "Can't Display">
+				</div>
+				<br>
+				and found to be: t = 64.17<br>
+				<br>
+				Using the critical level identified above, 95% confidence interval, the t-critical values corresponding with <img src="alpha.png" alt="Can't display"> = 0.05 and 21 degrees of freedom are: t = (-2.080, 2.080).<br>
+				<br>
+				Considering a t-statistic of t = 64.17 against the t-critical value of 2.080, the p-value of obtaining t within this distribution is 0.00%. This result is statistically significant; therefore, <u>reject the null hypothesis</u>.<br>
+				<br>
+				The paired dependent t-test study measuring the Stroop Effect perceptual phenomenon by recording and comparing the amount of time participants took reading aloud the color of text from a congruent and incongruent list concludes that incongruency between word and text color results in a statistically significant increase in time. This increase cannot be attributed to statistical error because the t-statistic is many multiples greater than the critical value.<br>
+				<br>
+				This conclusion matches my expectation.
+			</div>
+
+			<div class = "question" id = "q6">
+				6. Optional: What do you think is responsible for the effects observed? Can you think of an alternative or similar task that would result in a similar effect? Some research about the problem will be helpful for thinking about these two questions!
+			</div>
+
+			<div class="answer">
+				There are several theories that attempt to explain the observed effects. Most of the theories overlap in the idea that it is easier for the human brain to recognize words than color. Due to familiarity with reading, the brain automatically reads words and hesistates to recognize the color (automaticity).<br>
+				<br>
+				Another theory is that the reading "pathway" in the brain is stronger than the color recognizing "pathway" because of more frequent use. When a request is made of the weaker pathway with interference from the stronger one (reading incongruent colored words), a lag is created in the response (Parallel distributed processing).<br>
+				<br>
+				A task that would result in a similar effect is performing two different motions at the same time. For example, participants would be asked to pat the top of their head with one hand and pat their stomach with the other to a specific rhythm. Then participants would be asked to pat the top of their head with one hand while rubbing their stomach with the other. The error in maintaining the tap would be the dependent variable.
+			</div>
+			<br>
+			<div class="head2" id="ref">References</div>
+			<ul>
+				<li><a href = "http://www.udacity.com">Stats 95 - Udacity</a></li>
+				<li><a href = "https://docs.google.com/spreadsheets/d/14kmlXCqnMbxaWZL99gzwTJgq8LMmG2IXHp6YkM75ocg/edit?usp=sharing">Data</a></li>
+				<li><a href="http://stattrek.com/hypothesis-test/paired-means.aspx?Tutorial=AP">Star Trek</a></li>
+				<li><a href="http://www.tandfonline.com/doi/abs/10.1080/00221300109598901">Automaticity</a></li>
+				<li><a href="http://www.wisegeek.org/what-is-the-stroop-effect.htm">What is Stroop Effect?</a></li>
+			</ul>
+
+
+
+		</div>
+	</body>
+</html>
